@@ -11,12 +11,12 @@ module.exports = function checkAscOrder(numArray) {
 // }
 
 var acceptable = true;
-for(var i = 0; i < numArray.length; i++){
-  if (numArray[i] < numArray[i+1]){
+for(var i = 1; i < numArray.length; i++){
+  if (numArray[i] > numArray[i-1]){
     acceptable = true;
   }else{
     return false;
   }
 }
-return true;
+return acceptable;
 }
